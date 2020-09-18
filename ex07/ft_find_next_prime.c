@@ -6,7 +6,7 @@
 /*   By: rberthau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 21:59:33 by rberthau          #+#    #+#             */
-/*   Updated: 2020/09/17 22:34:59 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/09/18 12:15:03 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,25 @@ int ft_sqrt(int nb)
 int	ft_is_prime(int nb)
 {
 	int i;
-	int sqrtnb;
+	int sqrt;
 
-	i = 3;
-	sqrtnb = ft_sqrt(nb);
+	sqrt = ft_sqrt(nb);
+	if (nb == 0 || nb == 1)
+		return (0);
+	if (nb == 2)
+		return (1);
+	i = sqrt;
+	if (!(i % 2))
+		i++;
 	if (!(nb % 2))
 		return (0);
-	while (!(nb % i) || i <= nb / 2 + 1)
+	while ((nb % i) && i <= nb)
 		i += 2;
-	if (i >= sqrtnb)
+	if (i == nb)
 		return (1);
 	return (0);
 }
+
 
 int	ft_find_next_prime(int nb)
 {
@@ -45,14 +52,17 @@ int	ft_find_next_prime(int nb)
 	if (nb == 0 || nb == 1)
 		return (2);
 	if (nb == 2)
-		return(3);
+		return(2);
 	i = nb;
-	if (!(nb % 2) && ft_is_prime(nb) == 0)
+	if (ft_is_prime(nb) == 0)
 	{
-		while (i++)
+		if (nb % 2)
+			i++;
+		while (i)
 		{
 			if (ft_is_prime(i) == 1)
 				return (i);
+			i += 2;
 		}
 	}
 	return (nb);
@@ -62,5 +72,13 @@ int	ft_find_next_prime(int nb)
 
 int main ()
 {
-    printf("%d", ft_find_next_prime(90));
+	int i = 0;
+	int nb = 100000;
+
+	while (i <= nb)
+	{
+		printf("ft_find_next_prime(i) == 1)
+			printf("%d is prime \n
+		i++;
+	}
 }
