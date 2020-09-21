@@ -6,7 +6,7 @@
 /*   By: rberthau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 16:38:20 by rberthau          #+#    #+#             */
-/*   Updated: 2020/09/17 18:11:59 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/09/21 15:32:49 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,4 @@ int	ft_iterative_factorial(int nb)
 		i--;
 	}
 	return (nb);
-}
-
-#include <stdio.h>
-
-int main ()
-{
-	printf("%d", ft_iterative_factorial(3));
 }

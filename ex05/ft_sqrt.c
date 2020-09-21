@@ -6,27 +6,20 @@
 /*   By: rberthau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:25:03 by rberthau          #+#    #+#             */
-/*   Updated: 2020/09/17 21:23:39 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/09/21 15:38:23 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_sqrt(int nb)
+int	ft_sqrt(int nb)
 {
-	int i;
+	float i;
 
 	i = 0;
 	if (nb <= 0)
 		return (0);
-	while (i * i < nb)
+	while (i < nb / i)
 		i++;
-	if (i * i == nb)
+	if (i == nb / i)
 		return (i);
 	return (0);
-}
-
-#include <stdio.h>
-
-int main ()
-{
-    printf("%d", ft_sqrt(1));
 }

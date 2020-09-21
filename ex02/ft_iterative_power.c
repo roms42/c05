@@ -6,11 +6,11 @@
 /*   By: rberthau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 18:10:51 by rberthau          #+#    #+#             */
-/*   Updated: 2020/09/17 18:36:07 by rberthau         ###   ########.fr       */
+/*   Updated: 2020/09/21 15:35:27 by rberthau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_iterative_power(int nb, int power)
+int	ft_iterative_power(int nb, int power)
 {
 	int i;
 	int j;
@@ -27,11 +27,4 @@ int ft_iterative_power(int nb, int power)
 		i++;
 	}
 	return (nb);
-}
-
-#include <stdio.h>
-
-int main ()
-{
-	printf("%d", ft_iterative_power(5, 5));
 }
